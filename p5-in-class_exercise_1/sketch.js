@@ -42,7 +42,7 @@ strokeWeight(5);
 ellipse(400,150,150,100);
 */
 createCanvas(710, 400);
-background(50,250,50);
+//background(50,250,50);
 
 fill(128);
 base1 = createVector(0, height-150);
@@ -71,7 +71,7 @@ noStroke();
 rect(0, 0, width, height);
 
 //draw base
-fill(200);
+fill(10,100,200);
 quad(base1.x, base1.y, base2.x, base2.y, base2.x, height, 0, height);
 
 //calculate base top normal
@@ -82,7 +82,7 @@ var intercept = p5.Vector.dot(base1, normal);
 
 //draw ellipse
 noStroke();
-fill(255);
+fill(255,position.y,150);
 ellipse(position.x, position.y, r*2, r*2);
 
 //move ellipse
