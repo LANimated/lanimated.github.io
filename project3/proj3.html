@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Project 3</title>
+<link rel="stylesheet" type="text/css" href="third.css">
+
+<meta http-equiv="refresh" content="60">
+<script type="text/javascript">
+
+function theDate() {
+
+  var narrate;
+
+  var amPm= "AM";
+  amPm= amPm.replace(/AM/g, '<span style="color:blue">AM</span>');
+
+  var today= new Date();
+  var nowDate= today.getDate();
+
+  var hour= today.getHours();
+  var minutes= today.getMinutes();
+
+  minutes= checkTime(minutes);
+
+  var dayNum;
+  var dayString= "";
+  var dayName= new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+
+  dayNum= today.getDay();
+  dayString= dayName[dayNum];
+
+  var monthNum;
+  var monthString = "";
+  var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+  monthNum = today.getMonth();
+  monthString = months[monthNum];
+
+  	if ((hour >=6) && (hour <7)) {
+  		narrate= "6am. It's morning time and Bob is waking up.";
+  		document.getElementById("picture").innerHTML= "<img src=\"bob's day/bobwakes.png\">";
+  	} else if ((hour >=7) && (hour <=8)) {
+  		narrate= "Bob is now up and get's ready to start his day. School starts at 9.";
+  		document.getElementById("picture").innerHTML= "<img src=\"bob's day/bobsbreakfast.png\">";
+  	} else if ((hour >=9) && (hour <=11)) {
+  		narrate= "It's school time and Bob is in class.";
+  		document.getElementById("picture").innerHTML= "<img src=\"bob's day/bobschool.png\">";
+    } else if ((hour >= 12) && (hour <=13)) {
+  		narrate= "It's lunch time. Bob sits down and eat.";
+  		document.getElementById("picture").innerHTML= "<img src=\"bob's day/bobslunch.png\">";
+  	} else if ((hour >=14) && (hour <=17)) {
+  		narrate= "Practice makes perfect. He practices from 2 to 6 pm.";
+  		document.getElementById("picture").innerHTML= "<img src=\"bob's day/bobspractice.png\">";
+  	} else if ((hour >=18) && (hour <= 20)) {
+  		narrate= "Practice sure made Bob hungry. Good thing its time for dinner.";
+  		document.getElementById("picture").innerHTML= "<img src=\"bob's day/bobsdinner.png\">";
+  	} else {
+  		narrate= "It's time to sleep. Night Bob. See you tomorrow.";
+  		document.getElementById("picture").innerHTML= "<img src=\"bob's day/bobsleep.png\">";
+  	}
+
+  	if (hour > 11) {
+  		amPm= "PM";
+  		amPm= amPm.replace(/PM/g, '<span style="color:red">PM</span>');
+  	}
+
+  	if (hour > 12) {
+  		hour= hour-12;
+  	}
+
+  	if (hour == 0) {
+  		hour= hour+12;
+  	}
+  	document.getElementById("message").innerHTML= narrate;
+  	document.getElementById("labelDate").innerHTML= "Today is " + dayString + " " + monthString + " " + nowDate;
+  	document.getElementById("timeStamp").innerHTML= hour + ":" + minutes + " " + amPm;
+  }
+
+  function checkTime(i) {
+      if (i < 10) {i = "0" + i};
+      return i;
+  }
+
+  </script>
+
+
+  </head>
+  <body>
+    <h2>project 3</h2>
+    <h1>time of day</h1>
+    <p>asdf</p>
+
+    <h1>Bob's day</h1>
+    <h2 id="labelDate">&nbsp;</h2>
+    <h1 id="timeStamp">&nbsp;</h1>
+    <p id="picture"><img src="bob's day/bobsbreakfast.png" alt="bird"></p>
+    <h3 id="message">&nbsp;</h3>
+
+<p><a href="">link</a></p>
+
+  </body>
+</html>
