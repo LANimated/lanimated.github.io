@@ -48,7 +48,7 @@ function theDate() {
   	}
 	
 
-  	if ((hour >=6) && (hour <7)) {
+/*  	if ((hour >=6) && (hour <7)) {
   		narrate= "6am. It's morning time and Bob is waking up.";
   		document.getElementById("picture").innerHTML= "<img src=\"bob's day/bobwakes.png\">";
   	} else if ((hour >=7) && (hour <=8)) {
@@ -69,7 +69,7 @@ function theDate() {
   	} else {
   		narrate= "It's time to sleep. Night Bob. See you tomorrow.";
   		document.getElementById("picture").innerHTML= "<img src=\"bob's day/bobsleep.png\">";
-  	}
+  	}*/
 
   	if (hour > 11) {
   		amPm= "PM";
@@ -83,7 +83,7 @@ function theDate() {
   	if (hour == 0) {
   		hour= hour+12;
   	}
-  	document.getElementById("message").innerHTML= narrate;
+/*  	document.getElementById("message").innerHTML= narrate;*/
   	document.getElementById("labelDate").innerHTML= "Today is " + dayString + " " + monthString + " " + nowDate;
   	document.getElementById("timeStamp").innerHTML= hour + ":" + minutes + " " + amPm;
   }
@@ -102,16 +102,14 @@ function theDate() {
   </head>
 <body onLoad="theDate()">
 
-<p><a href="https://lanimated.github.io/">home</a></p>
     <h2>project 3</h2>
     <h1>time of day</h1>
 
-    <h1>Bob's day</h1>
     <h2 id="labelDate">&nbsp;</h2>
     <h1 id="timeStamp">&nbsp;</h1>
 	
 	<p id="bird"><img src="bob's day/afternoonbird.gif" alt="robin"></p>
-    <p id="picture"><img src="bob's day/bobsbreakfast.png" alt="bob"></p>
+<!--    <p id="picture"><img src="bob's day/bobsbreakfast.png" alt="bob"></p>-->
     <h3 id="message">&nbsp;</h3>
 
 	<h2>Skip to times</h2>
