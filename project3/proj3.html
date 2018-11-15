@@ -36,6 +36,17 @@ function theDate() {
 
   monthNum = today.getMonth();
   monthString = months[monthNum];
+	
+	  	if ((hour >=10) && (hour <15)) {
+  		document.getElementById("bird").innerHTML= "<img src=\"bob's day/afternoonbird.gif\">";
+  	} else if ((hour >=16) && (hour <=20)) {
+  		document.getElementById("bird").innerHTML= "<img src=\"bob's day/eveningbird.gif\">";
+	  	} else if ((hour >=5) && (hour <= 9)) {
+  		document.getElementById("bird").innerHTML= "<img src=\"bob's day/morningbird.gif\">";
+  	} else {
+  		document.getElementById("bird").innerHTML= "<img src=\"bob's day/nightbird.gif\">";
+  	}
+	
 
   	if ((hour >=6) && (hour <7)) {
   		narrate= "6am. It's morning time and Bob is waking up.";
@@ -84,6 +95,9 @@ function theDate() {
 
   </script>
 
+	  <style type="text/css">
+		  
+	  </style>
 
   </head>
 <body onLoad="theDate()">
@@ -95,9 +109,17 @@ function theDate() {
     <h1>Bob's day</h1>
     <h2 id="labelDate">&nbsp;</h2>
     <h1 id="timeStamp">&nbsp;</h1>
-    <p id="picture"><img src="bob's day/bobsbreakfast.png" alt="bird"></p>
+	
+	<p id="bird"><img src="bob's day/afternoonbird.gif" alt="robin"></p>
+    <p id="picture"><img src="bob's day/bobsbreakfast.png" alt="bob"></p>
     <h3 id="message">&nbsp;</h3>
 
-
+	<h2>Skip to times</h2>
+	<p><a href="sleep.html">night: 8pm-5am</a></p>
+	<p><a href="morning.html">morning: 5am-9am</a></p>
+	<p><a href="daytime.html">day: 10am-noon and 1pm-3pm</a></p>
+	<p><a href="evening.html">evening: 4pm-8pm</a></p>
+	<p><a href="food.html">mealtime: noon-1pm and 8pm-9pm</a></p>
+	
   </body>
 </html>

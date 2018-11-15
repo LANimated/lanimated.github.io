@@ -2,25 +2,26 @@ body {
   margin: 30px auto;
   max-width: 1000px;
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  background-color: gray;
+  background-color: #8B9EA0;
   /*url="https://fs.bitcoinmagazine.com/img/images/my-experience-on-wheel-of-doge.original.png";
 */
   line-height: 1.5;
   padding: 30px 20px;
+	text-align: center;
 }
 
 img {
 	width: 100%;
 	max-width:300px;
 	height: auto;
-	display:;
+	display: center;
   margin-left: auto;
   margin-right: auto
 }
 
 h1 {
   padding: 20px 0px 10px 0px;
-  color: blue;
+  color: #2D9633;
 }
 
 .white-box {

@@ -4,21 +4,59 @@
     <meta charset="utf-8">
     <title>proj 3</title>
 <link rel="stylesheet" type="text/css" href="third.css">
+
+<script type="text/javascript">
+
+function checkDegrees() {
+  var degree= document.getElementById("num").value);
+
+if () {
+  userVid= userVid.replace(/userVid/g, '<span style="transform:rotate(num)">AM</span>');
+}
+
+}
+
+function checkShow() {
+  var vidString= document.getElementById("userVid");
+
+}
+
+}
+
+</script>
+
   </head>
   <body>
+    <p><a href="https://lanimated.github.io/">home</a></p>
     <div class="white-box">
     <h2>project 3</h2>
     <h1>net art</h1>
     <h3>asdf</h3>
   </div>
-<p>adsf</p>
 
+<h2>Video rotater</h2>
+<p>Insert url of video here:</p>
+<p><input type="text" id="userVid"></p>
+<p>&nbsp;</p>
+<p>Which direction are you facing</p>
+<select id="num" onChange="checkDegrees()">
+	<option>Select</option>
+	<option value="0">upright</option>
+    <option value="270">left</option>
+    <option value="90">right</option>
+    <option value="180">upside down</option>
+    <option value="1">other</option>
+</select>
+
+<p><input type="button" value="Submit" onClick="checkShow()"></p>
 <div class="white-box">
-<h2>test the hover</h2>
 <p>asdf</p>
-<!-- <a href=""> !-->
-<p>jkl</p>
 </div>
+
+  <p id="video"><img src="bob's day/bobsbreakfast.png" alt="bird">put in ID for video</p>
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
 
   </body>
 </html>

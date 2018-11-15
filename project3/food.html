@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>time to sleep</title>
+<link rel="stylesheet" type="text/css" href="third.css">
+
+<meta http-equiv="refresh" content="60">
+<script type="text/javascript">
+
+function theDate() {
+
+  var narrate;
+
+  var amPm= "AM";
+  amPm= amPm.replace(/AM/g, '<span style="color:blue">AM</span>');
+
+  var today= new Date();
+  var nowDate= today.getDate();
+
+  var hour= today.getHours();
+  var minutes= today.getMinutes();
+
+  minutes= checkTime(minutes);
+
+  var dayNum;
+  var dayString= "";
+  var dayName= new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+
+  dayNum= today.getDay();
+  dayString= dayName[dayNum];
+
+  var monthNum;
+  var monthString = "";
+  var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+  monthNum = today.getMonth();
+  monthString = months[monthNum];
+	
+
+  	if ((hour >=12) && (hour <13)) {
+  		narrate= "Om nom nom nom";
+	} else if ((hour >=20) && (hour <21)) {
+  		narrate= "Om nom nom nom";	
+  	} else {
+  		narrate= "Its not time to eat. You're just hungry aren't you?";
+  	}
+
+  	if (hour > 11) {
+  		amPm= "PM";
+  		amPm= amPm.replace(/PM/g, '<span style="color:red">PM</span>');
+  	}
+
+  	if (hour > 12) {
+  		hour= hour-12;
+  	}
+
+  	if (hour == 0) {
+  		hour= hour+12;
+  	}
+  	document.getElementById("message").innerHTML= narrate;
+  	document.getElementById("labelDate").innerHTML= "Today is " + dayString + " " + monthString + " " + nowDate;
+  	document.getElementById("timeStamp").innerHTML= hour + ":" + minutes + " " + amPm;
+  }
+
+  function checkTime(i) {
+      if (i < 10) {i = "0" + i};
+      return i;
+  }
+
+  </script>
+
+	  	  <style type="text/css">
+		  body {
+			  background-color: #BF3C28;
+		  }
+		  
+	  </style>
+
+  </head>
+<body onLoad="theDate()">
+
+<p><a href="proj3.html">Back to the clock</a></p>
+
+    <h1>time of day</h1>
+
+    <h2 id="labelDate">&nbsp;</h2> 
+    <h1 id="timeStamp">&nbsp;</h1>
+	
+    <p> <video width="320" height="240" controls loop> 
+		<source src="bob's day/food.mp4" type="video/mp4">
+	</video> </p>
+    <h3 id="message">&nbsp;</h3>
+
+
+  </body>
+</html>
