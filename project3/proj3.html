@@ -36,7 +36,7 @@ function theDate() {
 
   monthNum = today.getMonth();
   monthString = months[monthNum];
-
+	
 	  	if ((hour >=10) && (hour <15)) {
   		document.getElementById("bird").innerHTML= "<img src=\"bob's day/afternoonbird.gif\">";
   	} else if ((hour >=16) && (hour <=20)) {
@@ -47,17 +47,17 @@ function theDate() {
   		document.getElementById("bird").innerHTML= "<img src=\"bob's day/nightbird.gif\">";
   	}
 
-    if ((hour >=5) && (hour <9)) {
-    /*morning*/narrate= "<a href=\"morning.html\">What time is it?</a>";
-  } else if ((hour >=10) && (hour <=11) || (hour >=13) && (hour <=15)) {
-    /*day*/narrate= "<a href=\"daytime.html\">What time is it?</a>";
-  } else if ((hour >=16) && (hour <= 19)) {
-    /*evening*/narrate= "<a href=\"evening.html\">What time is it?</a>";
-  } else if ((hour =12) || (hour = 20)) {
-    /*meal time*/narrate= "<a href=\"food.html\">What time is it?</a>";
-  } else {
-    /*night*/narrate= "<a href=\"sleep.html\">What time is it?</a>";
-  }
+	if ((hour >=5) && (hour <9)) {
+    /*morning*/narrate= "<a href=\"morning.html\">What do I have to do right now?</a>";
+  		} else if ((hour >=10) && (hour <=11)) {
+    /*day*/narrate= "<a href=\"daytime.html\">What do I have to do right now?</a>";
+	  	} else if ((hour >=16) && (hour <= 19)) {
+    /*evening*/narrate= "<a href=\"evening.html\">What do I have to do right now??</a>";
+		} else if ((hour >=12) && (hour <= 15)) {
+    /*meal time*/narrate= "<a href=\"food.html\">What do I have to do right now?</a>";
+  	} else {
+    /*night*/narrate= "<a href=\"sleep.html\">What do I have to do right now?</a>";
+  	}
 
 /*  	if ((hour >=6) && (hour <7)) {
   		narrate= "6am. It's morning time and Bob is waking up.";
@@ -94,7 +94,7 @@ function theDate() {
   	if (hour == 0) {
   		hour= hour+12;
   	}
-  	document.getElementById("message").innerHTML= narrate;
+document.getElementById("message").innerHTML= narrate;
   	document.getElementById("labelDate").innerHTML= "Today is " + dayString + " " + monthString + " " + nowDate;
   	document.getElementById("timeStamp").innerHTML= hour + ":" + minutes + " " + amPm;
   }
@@ -107,18 +107,18 @@ function theDate() {
   </script>
 
 	  <style type="text/css">
-
+		  
 	  </style>
 
   </head>
 <body onLoad="theDate()">
 
     <h2>project 3</h2>
-    <h1>time of day</h1>
+	<h1><a href="clock.html">final ver</a></h1>
 
     <h2 id="labelDate">&nbsp;</h2>
     <h1 id="timeStamp">&nbsp;</h1>
-
+	
 	<p id="bird"><img src="bob's day/afternoonbird.gif" alt="robin"></p>
 <!--    <p id="picture"><img src="bob's day/bobsbreakfast.png" alt="bob"></p>-->
     <h3 id="message">&nbsp;</h3>
@@ -129,6 +129,6 @@ function theDate() {
 	<p><a href="daytime.html">day: 10am-noon and 1pm-3pm</a></p>
 	<p><a href="evening.html">evening: 4pm-8pm</a></p>
 	<p><a href="food.html">mealtime: noon-1pm and 8pm-9pm</a></p>
-
+	
   </body>
 </html>

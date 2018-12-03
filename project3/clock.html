@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Daytime</title>
+    <title>What time is it?</title>
 <link rel="stylesheet" type="text/css" href="third.css">
 
 <meta http-equiv="refresh" content="60">
@@ -20,7 +20,6 @@ function theDate() {
 
   var hour= today.getHours();
   var minutes= today.getMinutes();
-
   minutes= checkTime(minutes);
 
   var dayNum;
@@ -36,17 +35,25 @@ function theDate() {
 
   monthNum = today.getMonth();
   monthString = months[monthNum];
-	
 
-  	if ((hour >=10) && (hour <12)) {
-  		narrate= "The sky is awake, so I'm awake, so we have to play!";
-  		document.getElementById("picture").innerHTML= "<img src=\"bob's day/afternoonbird.gif\">";
-	} else if ((hour >=13) && (hour <15)) {
-  		narrate= "The sky is awake, so I'm awake, so we have to play!";	
-  	} else {
-  		narrate= "You're not suppose to be seeing this yet...So how's your day been?";
-  		document.getElementById("picture").innerHTML= "<img src=\"bob's day/afternoonbird.gif\">";
-  	}
+
+
+    if ((hour >=5) && (hour <=9)) {
+    /*morning*/narrate= "<a href=\"morning.html\">What do I have to do right now?</a>";
+  } else if ((hour >=10) && (hour <=11)) {
+    /*day*/narrate= "<a href=\"daytime.html\">What do I have to do right now?</a>";
+  	} else if ((hour >=13) && (hour <=15)) {
+    /*day*/narrate= "<a href=\"daytime.html\">What do I have to do right now?</a>";
+  } else if ((hour >=16) && (hour <=19)) {
+    /*evening*/narrate= "<a href=\"evening.html\">What do I have to do right now??</a>";
+  } else if ((hour >=12) && (hour <13)) {
+    /*meal time*/narrate= "<a href=\"food.html\">What do I have to do right now?</a>";
+	    } else if ((hour >=20) && (hour <21)) {
+    /*meal time*/narrate= "<a href=\"food.html\">What do I have to do right now?</a>";
+  } else {
+    /*night*/narrate= "<a href=\"sleep.html\">What do I have to do right now?</a>";
+  }
+
 
   	if (hour > 11) {
   		amPm= "PM";
@@ -72,23 +79,25 @@ function theDate() {
 
   </script>
 
-	  	  <style type="text/css">
-		  body {
-			  background-color: #9AEFFF;
+	  <style type="text/css">
+		  #timeStamp {
+			font-size: 72pt;
 		  }
-		  
 	  </style>
 
   </head>
 <body onLoad="theDate()">
 
-<p><a href="clock.html">Back to the clock</a></p>
-
-    <h2 id="labelDate">&nbsp;</h2> 
+	<h3>Hello</h3>
+    <h2 id="labelDate">&nbsp;</h2>
     <h1 id="timeStamp">&nbsp;</h1>
-	
-    <p id="picture"><img src="bob's day/bobsbreakfast.png" alt="bob"></p>
     <h3 id="message">&nbsp;</h3>
+	
+<h1>&nbsp;</h1>
+	<h2>&nbsp;</h2>
+		<p id="bird">&nbsp;</p>
+<!--    <p id="picture"><img src="bob's day/bobsbreakfast.png" alt="bob"></p>-->
+	<p><a href="proj3.html">_</a></p>
 
 
   </body>
